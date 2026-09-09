@@ -11,7 +11,7 @@ module.exports = {
 
         const reactionChannel = interaction.guild.channels.cache.get(process.env.REACTION_ROLE_CHANNEL_ID);
         if (reactionChannel) {
-            const msg = await reactionChannel.send('CLICK ✔️ TO ASSIGN YOURSELF A ROLE !! ');
+            const msg = await reactionChannel.send('**CLICK ✔️ TO ASSIGN YOURSELF A ROLE!!** ');
             await msg.react('✔️');
             await interaction.editReply(`✔️ Reaction role message sent to ${reactionChannel}`);
         } else {
