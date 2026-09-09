@@ -1,6 +1,6 @@
-# 3BITS Ticket Bot
+# 3BITS DISCORD BOT
 
-Discord bot for creating FiveM & GTA V support tickets
+3BITS DISCORD BOT
 
 ## Installation
 
