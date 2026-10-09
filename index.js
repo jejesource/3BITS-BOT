@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Collection, Events } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, Events, Partials } = require('discord.js');
 const fs = require('fs');
 require('dotenv').config();
 
@@ -9,7 +9,9 @@ const client = new Client({
         GatewayIntentBits.GuildMembers,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessageReactions
-    ]
+    ],
+    // Needed so reactions on the old /setup message still work after Railway restarts
+    partials: [Partials.Message, Partials.Channel, Partials.Reaction, Partials.User, Partials.GuildMember]
 });
 
 client.commands = new Collection();
